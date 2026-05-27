@@ -5,14 +5,14 @@
         User: {{ user.username }}
       </a>
     </li>
-    <form action="{% url 'taxi:logout' %}" method="post">
+    <form action="{% url 'logout' %}" method="post">
       {% csrf_token %}
       <button type="submit" class="btn btn-info">
         Log out
       </button>
     </form>
     {% else %}
-    <li><a href="{% url 'taxi:login' %}" class="btn btn-info">
+    <li><a href="{% url 'login' %}" class="btn btn-info">
       Log in
     </a></li>
   {% endif %}
